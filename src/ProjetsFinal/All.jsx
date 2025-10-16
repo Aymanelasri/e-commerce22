@@ -46,7 +46,7 @@ const products = {
      <main >
   {/* Video Section */}
   <section className="video-container">
-    <video autoPlay loop muted className="video-full">
+    <video   autoPlay muted loop playsInline className="video-full">
       <source src="video2.mp4" type="video/mp4" />
     </video>
   </section>
