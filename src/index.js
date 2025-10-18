@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fontsource/roboto";          
-import "@fontsource/roboto/700.css"; 
+
 import "@fontsource/poppins";
-import "@fontsource/poppins/600.css";
+
 
 import reportWebVitals from './reportWebVitals';
 import Projets from './ProjetsFinal/Projets';

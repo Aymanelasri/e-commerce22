@@ -2,9 +2,9 @@ import './Projets.css';
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import "@fontsource/roboto";          
-import "@fontsource/roboto/700.css"; 
+
 import "@fontsource/poppins";
-import "@fontsource/poppins/600.css";
+
 
 
 export default function All() {

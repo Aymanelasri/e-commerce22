@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 import "@fontsource/roboto";          
-import "@fontsource/roboto/700.css"; 
+
 import "@fontsource/poppins";
-import "@fontsource/poppins/600.css";
+
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useContext(CartContext);

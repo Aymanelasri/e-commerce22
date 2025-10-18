@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import "@fontsource/roboto";          
-import "@fontsource/roboto/700.css"; 
+
 import "@fontsource/poppins";
-import "@fontsource/poppins/600.css";
+
 
 function App() {
   return (
