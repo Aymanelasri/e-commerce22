@@ -2,6 +2,7 @@ import './Projets.css';
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
+
 export default function All() {
   const { addToCart } = useContext(CartContext);
 
