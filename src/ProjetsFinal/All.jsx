@@ -1,9 +1,13 @@
 import './Projets.css';
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
 export default function All() {
-  
-const products = {
-  women: [
-    {id:1,title:"Elegant Midi Dress",prix:"300 DH",description:"A lightweight printed midi dress that offers comfort and elegance for everyday wear or special occasions.",img:"/images/women/photo1.jpg"},
+  const { addToCart } = useContext(CartContext);
+
+  const products = {
+    women: [
+      {id:1,title:"Elegant Midi Dress",prix:"300 DH",description:"A lightweight printed midi dress that offers comfort and elegance for everyday wear or special occasions.",img:"/images/women/photo1.jpg"},
     {id:2,title:"Satin Blouse",prix:"200 DH",description:"A simple satin blouse with a soft collar, perfect for work or casual evening outings.",img:"/images/women/photo2.jpg"},
     {id:3,title:"Leather Crossbody Bag",prix:"400 DH",description:"A small adjustable leather crossbody bag with a classic yet modern look.",img:"/images/women/photo3.jpg"},
     {id:4,title:"Comfy Sneakers",prix:"250 DH",description:"Lightweight sport sneakers with cushioned soles for all-day comfort.",img:"/images/women/photo4.jpg"},
@@ -84,7 +88,7 @@ const products = {
                   <h5 className="card-title">{product.title}</h5>
                   <p className="card-text"><strong>PRIX : </strong><strong>{product.prix}</strong></p>
                   <button className='btn btn-light '>Voir Détails</button><br /><br />
-                  <button className='btn btn-primary'>Ajouter au Panier</button>
+                  <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au Panier</button>
                 </div>
               </div>
             </div>

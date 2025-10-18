@@ -13,14 +13,13 @@ body {
 
 /*nav button login and li */
 nav {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  background-color: white;
+
   animation: slideDown 1s forwards;
   position: fixed; 
   top: 0;               
   width: 100%;     
-  z-index: 10;    
+  z-index: 1000;    
 }
 
 .nav-link.underline-hover {
@@ -59,8 +58,8 @@ nav {
 
 /* Video container animation */
 .video-container {
-  
-  width: 100vw; 
+  position: relative;
+  width: 95vw; 
   height: 80vh; 
   margin-top: 80px;
   filter: brightness(50%); 
@@ -71,7 +70,7 @@ nav {
 }
 
 .video-full {
-  width: 100%;
+  width: 98vw;
   height: 100%;
   object-fit: cover;  
 }
@@ -103,21 +102,22 @@ nav {
   height: 150px;
   border-radius: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 220px) {
   .video-container {
     height: 50vh; 
     width: 94vw;
   }
   .imgc{
-    width: 100%;
-    height: 100px;
+    width: 80%;
+    height: 80px;
     border-radius: 50%;
   }
   #img1{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 80px;
     border-radius: 50%;
   }
+   
     #nav {
     position: fixed;
     top: 100px;
@@ -139,9 +139,23 @@ nav {
   #nav.active {
     transform: translateX(0);
   }
-  
-
-
+  .nav{
+    flex-wrap: nowrap;
+    margin-left: 12px;
+    
+    
+  }
+  .shop{
+    margin-left: 0px;
+    margin-right: 0;
+  }
+  .button1{
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 12px 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
 
   
 }
