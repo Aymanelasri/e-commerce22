@@ -64,7 +64,7 @@ export default function All() {
     <div className="video-text">
        <h1>La mode pour toute la famille</h1>
         <p>Homme, femme et enfant — trouvez votre style parmi nos dernières collections.</p>
-        <a className="cta-btn" href="/shop">Découvrir maintenant</a>
+        <a className="cta-btn" href="/">Découvrir maintenant</a>
     </div>
   </section>
 
