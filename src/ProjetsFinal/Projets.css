@@ -193,3 +193,109 @@ nav {
 
 
 
+/* Cart.css */
+   .cart-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .cart-header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+        }
+        
+        .empty-cart i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #dee2e6;
+        }
+        
+        .gift-section {
+            background-color: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .summary-section {
+            padding: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+        
+        .promo-banner {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .checkout-btn {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .features-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        
+        .gift-note {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 576px) {
+            .cart-container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            
+            .feature-item {
+                margin-bottom: 15px;
+            }
+        }
+
+
