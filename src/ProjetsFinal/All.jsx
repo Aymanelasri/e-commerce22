@@ -1,5 +1,7 @@
 import './Projets.css';
-import { useContext } from "react";
+import { Link } from "react-router-dom";
+
+import {  useContext } from "react";
 import { CartContext } from "./CartContext";
 import "@fontsource/roboto";          
 
@@ -9,6 +11,7 @@ import "@fontsource/poppins";
 
 export default function All() {
   const { addToCart } = useContext(CartContext);
+  
 
   const products = {
     women: [
@@ -58,25 +61,30 @@ export default function All() {
     <video   autoPlay muted loop playsInline className="video-full">
       <source src="video2.mp4" type="video/mp4" />
     </video>
+    <div className="video-text">
+       <h1>La mode pour toute la famille</h1>
+        <p>Homme, femme et enfant — trouvez votre style parmi nos dernières collections.</p>
+        <a className="cta-btn" href="/shop">Découvrir maintenant</a>
+    </div>
   </section>
 
   {/* All Products Section */}
   <section className="all-products">
-    <h2 className="text-center my-4" style={{ fontFamily: 'calibri', fontWeight: 'bold' }}>ALL PRODUCTS</h2>
+    <h2 className="text-center my-4" style={{ fontFamily: 'roboto',  }}>ALL PRODUCTS</h2>
     <div className="container d-flex text-center mb-4 justify-content-around">
       <div>
         <img className='imgc' id='img1' src="/images/3img/men2.jpg" alt="" />
-        <h3>men</h3>
+        <h3>Homme</h3>
 
       </div>
       <div>
         <img className='imgc' src="/images/3img/women.jpg" alt="" />
-        <h3>women</h3>
+        <h3>Femme</h3>
 
       </div>
       <div>
         <img className='imgc' src="/images/3img/kids.jpg" alt="" />
-        <h3>kids</h3>
+        <h3>Enfants</h3>
       </div>
      
 
@@ -85,15 +93,17 @@ export default function All() {
       <div className="row">
         {Object.entries(products).map(([product, keys]) => (
           keys.map(product => (
-            <div key={`${product}-${product.id}`} className="col-6 col-md-4 col-lg-3 mb-4">
+            <div key={product.id} className="col-6 col-md-4 col-lg-3 mb-4">
               <div className="card h-100">
                 
                 <img src={product.img} className="card-img-top" alt={product.title} />
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text"><strong>PRIX : </strong><strong>{product.prix}</strong></p>
-                  <button className='btn btn-light '>Voir Détails</button><br /><br />
-                  <button className='btn btn-primary' onClick={() => addToCart(product)}>Ajouter au Panier</button>
+                  <p className="card-text " ><strong>PRIX : </strong><strong>{product.prix}</strong></p>
+                  
+
+                  <button className='btn btn-light '> <Link className='text-dark text-decoration-none' to="/Details">Voir Détails</Link> </button><br /><br />
+                  <button  className="btn btn-primary rounded-pill   shadow-sm fw-semibold d-flex align-items-center gap-2" onClick={() => addToCart(product ) }>  <i className="fas fa-cart-plus"></i>Ajouter au Panier</button>
                 </div>
               </div>
             </div>
@@ -106,7 +116,89 @@ export default function All() {
   
         
   </section>
+{/* ------------------------------------------------------------------------------------------- */}
+  <section className="section-padding text-center">
+    <div className="container">
+      <h2 className="mb-5 mt-5">
+        Pourquoi devriez-vous choisir <span className="highlight">CASA MODA</span> ?
+      </h2>
+
+      <div className="row text-start justify-content-center mt-5 g-5">
+        
+        <div className="col-md-4 feature">
+          <h5 className="fw-bold">La mode à petit prix.</h5>
+          <p>
+            Vous pouvez avoir une différence allant jusqu’à -70% moins cher comparé au même produit neuf.
+            Cela vaut le coût pour faire des économies sur votre budget shopping.
+          </p>
+        </div>
+
+       
+        <div className="col-md-4 feature">
+          <h5 className="fw-bold">Protection & Sécurité</h5>
+          <p>
+            Vos paiements en ligne ou en cash sont sécurisés par CASA MODA.
+            Et si l'article n'est pas conforme, le remboursement est garanti et le retour offert.
+          </p>
+        </div>
+
+       
+        <div className="col-md-4 feature">
+          <h5 className="fw-bold">Livraison porte à porte</h5>
+          <p>
+            Finis le casse-tête de la vente à distance. Ne vous déplacez plus,
+            un livreur vient jusqu'en bas de chez vous pour récupérer ou vous livrer un article.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+{/* ----------------------------------------------------------------------------------------------- */}
+  <footer>
+    <div className="container">
+      <div className="row justify-content-between">
+       
+        <div className="col-md-4 mb-4">
+          <div className="footer-logo">CASA MODA</div>
+          <p className="footer-text">
+            La seconde-main, c’est l’avenir et CASA MODA te le prouve.
+            Sur CASA MODA, tu vends les vêtements qui ont encore des choses à vivre
+            et tu déniches des merveilles que tu ne trouves pas en boutique.
+          </p>
+        </div>
+
+        
+      <div className="col-md-3 mb-4">
+          <h6 className="footer-title">À PROPOS</h6>
+          <Link to="/faq" className="footer-link">FAQ</Link>
+          <Link to="/contact" className="footer-link">Contact</Link>
+          <Link to="/mentions-legales" className="footer-link">Mentions Légales</Link>
+          <Link to="/cgu" className="footer-link">CGU</Link>
+        </div>
+
+        <div className="col-md-3 mb-4">
+          <h6 className="footer-title">SUIVEZ-NOUS SUR</h6>
+          <div className="mb-3">
+            <Link to="/" className="social-icon">
+              <i className="fab fa-facebook-f"></i>
+            </Link>
+            <Link to="/" className="social-icon">
+              <i className="fab fa-instagram"></i>
+            </Link>
+            <Link to="/" className="social-icon">
+              <i className="fab fa-youtube"></i>
+            </Link>
+            
+          </div>
+
+          <Link to="/" className="footer-link">Besoin d’aide ?</Link>
+          <Link to="/" className="footer-link">Comment vendre ?</Link>
+          <Link to="/" className="footer-link">Comment acheter</Link>
+       </div>
+      </div>
+    </div>
+  </footer>
 
     </>
   );

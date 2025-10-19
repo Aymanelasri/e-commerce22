@@ -1,4 +1,5 @@
 import Cart from "./Cart";
+import Login from "./Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import All from "./All";
@@ -16,6 +17,7 @@ export default function Projets() {
           <Route path="/" element={<Layout />}>
             <Route index element={<All />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/Login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

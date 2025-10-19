@@ -29,16 +29,16 @@ export default function Layout() {
                 <button id="menu-btn" className="border-0 bg-transparent ">
                     <i className="bi bi-list me-4 d-block d-md-none"></i>
                 </button>
-                <h2 className="d-none d-sm-block" style={{ color: '#D4AF37', fontFamily: 'calibri', letterSpacing: '1px', margin: 0, fontSize: '24px' }}>
+                <h2 className="d-none d-sm-block" style={{ color: '#ff5500', fontFamily: 'calibri', letterSpacing: '1px', margin: 0, fontSize: '24px' }}>
                     CASA MODA
                 </h2>
                 <img id='logo' className='d-block d-sm-none pt-2' style={{ width: "90px", height: "70px", display:"none"}} src="cm2.png" alt="" />
 
                 <ul className="nav justify-content-center flex-grow-1" id="nav">
                     <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/">All</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Men">Men</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Women">Women</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Kids">Kids</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Men">Homme</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Women">Femme</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Kids">Enfants</Link></li>
                 </ul>
 
                 <ul className="nav justify-content-center flex-grow-2 align-items-center nav-login">

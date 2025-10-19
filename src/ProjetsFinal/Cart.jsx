@@ -43,7 +43,8 @@ export default function Cart() {
               {/* items list */}
               <div className="cart-items mb-4">
                 {cartItems.map((item, index) => {
-                  const id = item.id ?? item._id ?? index;
+                  const id = item.id || item._id || index;
+                  
                   const price = Number(item.prix) || 0;
                   const qty = Number(item.quantity) || 1;
                   return (
@@ -51,13 +52,13 @@ export default function Cart() {
                       <div className="d-flex align-items-center">
                         {item.img && <img src={item.img} alt={item.title || ''} style={{ width: 80, height: 80, objectFit: 'cover' }} className="me-3" />}
                         <div>
-                          <h6 className="mb-1">{item.title || item.name || 'Produit'}</h6>
+                          <h6 className="mb-1">{item.title  }</h6>
                           <div className="text-muted">{qty} x {price.toFixed(2)} DH</div>
                         </div>
                       </div>
                       <div className="text-end">
                         <div className="fw-bold">{(price * qty).toFixed(2)} DH</div>
-                        <button className="btn btn-sm btn-danger mt-2" onClick={() => removeFromCart(id)}>Supprimer</button>
+                        <button className="btn btn-sm btn-danger mt-2" onClick={() => removeFromCart(id)}>X</button>
                       </div>
                     </div>
                   )
@@ -66,9 +67,9 @@ export default function Cart() {
 
               {/* gift + summary */}
               <div className="gift-section mb-4">
-                <h4 className="h5 mb-2"><i className="fas fa-gift me-2 text-warning"></i>NOTRE CADEAU DÈS 50 DH D'ACHAT*</h4>
-                <p className="mb-1">Un cahier Smala</p>
-                <p className="gift-note">* avant livraison, dans la limite des stocks disponibles.</p>
+                <h4 className="h5 mb-2"><i className="fas fa-gift me-2 text-warning"></i>NOTRE CADEAU DÈS 500 DH D'ACHAT</h4>
+                <p className="mb-1">Un accessoire exclusif signé Casa Moda</p>
+                <p className="gift-note"> avant livraison, dans la limite des stocks disponibles.</p>
               </div>
 
               <div className="summary-section">
@@ -84,12 +85,7 @@ export default function Cart() {
                   <span>{total.toFixed(2)} DH</span>
                 </div>
 
-                <div className="promo-banner mt-4">
-                  <p className="mb-0">
-                    <i className="fas fa-star me-2 text-warning"></i>
-                    Je gagne sur ma commande en essayant. Supermonte gratuitement pendant 30 jours sans engagement : satisfait ou remboursé
-                  </p>
-                </div>
+                
 
                 <button className="btn checkout-btn text-white w-100 mt-4">
                   Valider et passer au paiement
