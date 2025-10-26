@@ -1,22 +1,11 @@
 // CartContext.jsx
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState} from "react";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
  
-
- 
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cartItems"));
-    if (storedCart) setCartItems(storedCart);
-  }, []);
-  
-
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
 
     const addToCart = (product) => {
     setCartItems((prev) => {
@@ -37,7 +26,6 @@ export function CartProvider({ children }) {
     });
   };
 
-  // إزالة منتج من السلة
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };

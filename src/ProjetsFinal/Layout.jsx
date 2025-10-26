@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Layout() {
   const { cartItems } = useContext(CartContext);
+
     useEffect(() => {
         const menuBtn = document.getElementById("menu-btn");
         const nav = document.getElementById("nav");
@@ -36,9 +37,9 @@ export default function Layout() {
 
                 <ul className="nav justify-content-center flex-grow-1" id="nav">
                     <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/">All</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Men">Homme</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Women">Femme</Link></li>
-                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/Kids">Enfants</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/nav/Homme">Homme</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/nav/Femme">Femme</Link></li>
+                    <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/nav/Enfants">Enfants</Link></li>
                 </ul>
 
                 <ul className="nav justify-content-center flex-grow-2 align-items-center nav-login">
