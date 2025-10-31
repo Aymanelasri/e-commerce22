@@ -28,31 +28,30 @@ export default function All() {
 
   ],
   men: [
-    {id:1,title:"Classic T-Shirt",prix:250 ,description:"A timeless classic t-shirt with a classic fit and classic colors.",img:"/images/men/photo1.jpg" , quantity:30},
-    {id:2,title:"Sporty Sneakers",prix:350 ,description:"Lightweight sport sneakers with cushioned soles for all-day comfort.",img:"/images/men/photo2.jpg" , quantity:20},
-    {id:3,title:"Leather Wallet",prix:450 ,description:"A compact leather wallet with multiple compartments for cards and cash.",img:"/images/men/photo3.jpg" , quantity:40},
-    {id:4,title:"Casual Shirt",prix:100 ,description:"A casual shirt with a relaxed fit, perfect for weekend outings.",img:"/images/men/photo4.jpg" , quantity:50},
-    {id:5,title:"Chino Pants",prix:50 ,description:"Comfortable chino pants with a modern fit, suitable for both work and casual wear.",img:"/images/men/photo5.jpg" , quantity:60},
-    {id:6,title:"Wool Coat",prix:800 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/men/photo6.jpg" , quantity:70},
-    {id:7,title:"Aviator Sunglasses",prix:600,description:"Stylish aviator sunglasses with UV protection for sunny days.",img:"/images/men/photo7.jpg" , quantity:40},
-    {id:8,title:"Leather Belt",prix:350 ,description:"A durable leather belt with a classic buckle, suitable for both casual and formal outfits.",img:"/images/men/photo8.jpg" , quantity:30},
-    {id:9,title:"Digital Watch",prix:500 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/men/photo9.jpg  " , quantity:20},
-    {id:10,title:"Digital Watch",prix:700 ,description:"A fresh and invigorating cologne with woody and citrus notes.",img:"/images/men/photo10.jpg" , quantity:10},     
+    {id:11,title:"Classic T-Shirt",prix:250 ,description:"A timeless classic t-shirt with a classic fit and classic colors.",img:"/images/men/photo1.jpg" , quantity:30},
+    {id:12,title:"Sporty Sneakers",prix:350 ,description:"Lightweight sport sneakers with cushioned soles for all-day comfort.",img:"/images/men/photo2.jpg" , quantity:20},
+    {id:13,title:"Leather Wallet",prix:450 ,description:"A compact leather wallet with multiple compartments for cards and cash.",img:"/images/men/photo3.jpg" , quantity:40},
+    {id:14,title:"Casual Shirt",prix:100 ,description:"A casual shirt with a relaxed fit, perfect for weekend outings.",img:"/images/men/photo4.jpg" , quantity:50},
+    {id:15,title:"Chino Pants",prix:50 ,description:"Comfortable chino pants with a modern fit, suitable for both work and casual wear.",img:"/images/men/photo5.jpg" , quantity:60},
+    {id:16,title:"Wool Coat",prix:800 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/men/photo6.jpg" , quantity:70},
+    {id:17,title:"Aviator Sunglasses",prix:600,description:"Stylish aviator sunglasses with UV protection for sunny days.",img:"/images/men/photo7.jpg" , quantity:40},
+    {id:18,title:"Leather Belt",prix:350 ,description:"A durable leather belt with a classic buckle, suitable for both casual and formal outfits.",img:"/images/men/photo8.jpg" , quantity:30},
+    {id:19,title:"Digital Watch",prix:500 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/men/photo9.jpg  " , quantity:20},
+    {id:20,title:"Digital Watch",prix:700 ,description:"A fresh and invigorating cologne with woody and citrus notes.",img:"/images/men/photo10.jpg" , quantity:10},     
   ],
   kids: [
-    {id:1,title:"Graphic T-Shirt",prix:150 ,description:"A fun graphic t-shirt with colorful prints, perfect for everyday wear.",img:"/images/kids/photo1.jpg" , quantity:30},
-    {id:2,title:"Denim Overalls",prix:200 ,description:"Durable denim overalls with adjustable straps, ideal for playtime.",img:"/images/kids/photo2.jpg" , quantity:40},
-    {id:3,title:"Leather Wallet",prix:250 ,description:"A compact leather wallet with multiple compartments for cards and cash.",img:"/images/kids/photo3.jpg" , quantity:50},
-    {id:4,title:"Casual Shirt",prix:300 ,description:"A casual shirt with a relaxed fit, perfect for weekend outings.",img:"/images/kids/photo4.jpg" , quantity:25},
-    {id:5,title:"Chino Pants",prix:350 ,description:"Comfortable chino pants with a modern fit, suitable for both work and casual wear.",img:"/images/kids/photo5.jpg" , quantity:20},
-    {id:6,title:"Wool Coat",prix:400 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/kids/photo6.jpg" , quantity:15},
-    {id:7,title:"Aviator Sunglasses",prix:450 ,description:"Stylish aviator sunglasses with UV protection for sunny days.",img:"/images/kids/photo7.jpg" , quantity:10},
-    {id:8,title:"Leather Belt",prix:350 ,description:"A durable leather belt with a classic buckle, suitable for both casual and formal outfits.",img:"/images/kids/photo8.jpg" , quantity:50},
-    {id:9,title:"Digital Watch",prix:100 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/kids/photo9.jpg" , quantity:40},
-    {id:10,title:"Cologne",prix:100 ,description:"A fresh and invigorating cologne with woody and citrus notes.",img:"/images/kids/photo10.jpg" , quantity:30},
+    {id:21,title:"Graphic T-Shirt",prix:150 ,description:"A fun graphic t-shirt with colorful prints, perfect for everyday wear.",img:"/images/kids/photo1.jpg" , quantity:30},
+    {id:22,title:"Denim Overalls",prix:200 ,description:"Durable denim overalls with adjustable straps, ideal for playtime.",img:"/images/kids/photo2.jpg" , quantity:40},
+    {id:23,title:"Leather Wallet",prix:250 ,description:"A compact leather wallet with multiple compartments for cards and cash.",img:"/images/kids/photo3.jpg" , quantity:50},
+    {id:24,title:"Casual Shirt",prix:300 ,description:"A casual shirt with a relaxed fit, perfect for weekend outings.",img:"/images/kids/photo4.jpg" , quantity:25},
+    {id:25,title:"Chino Pants",prix:350 ,description:"Comfortable chino pants with a modern fit, suitable for both work and casual wear.",img:"/images/kids/photo5.jpg" , quantity:20},
+    {id:26,title:"Wool Coat",prix:400 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/kids/photo6.jpg" , quantity:15},
+    {id:27,title:"Aviator Sunglasses",prix:450 ,description:"Stylish aviator sunglasses with UV protection for sunny days.",img:"/images/kids/photo7.jpg" , quantity:10},
+    {id:28,title:"Leather Belt",prix:350 ,description:"A durable leather belt with a classic buckle, suitable for both casual and formal outfits.",img:"/images/kids/photo8.jpg" , quantity:50},
+    {id:29,title:"Digital Watch",prix:100 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/kids/photo9.jpg" , quantity:40},
+    {id:30,title:"Cologne",prix:100 ,description:"A fresh and invigorating cologne with woody and citrus notes.",img:"/images/kids/photo10.jpg" , quantity:30},
   ],
-}
-    
+}  
   return (
     <>
      <main >
@@ -95,11 +94,14 @@ export default function All() {
       items.map(product => (
         <div key={product.id} className="col-6 col-md-4 col-lg-3 mb-4 d-flex">
           <div className="card h-100 d-flex flex-column">
-            <img
-              src={product.img}
-              className="card-img-top"
-              alt={product.title}
-            />
+            <Link to={`/Details/${product.id}`}>
+              <img
+                src={product.img}
+                className="card-img-top"
+                alt={product.title}
+                style={{ cursor: "pointer" }}
+              />
+            </Link>
             <div className="card-body d-flex flex-column">
               
               <h5 className="card-title" style={{ minHeight: "3rem", overflow: "hidden", textOverflow: "ellipsis" }}>
@@ -111,19 +113,17 @@ export default function All() {
 
             
               <Link
-                to={`/details/${product.id}`}
+                to={`/Details/${product.id}`}
                 className="btn btn-light mb-2 w-100 text-dark text-decoration-none d-flex justify-content-center"
               >
                 Voir Détails
               </Link>
 
-              
               <button
-                className="btn btn-primary mt-auto rounded-pill shadow-sm fw-semibold d-flex align-items-center justify-content-center gap-2 w-100"
-                style={{ minHeight: "40px" }} 
+                className="btn btn-success btn-sm w-100"
                 onClick={() => addToCart(product)}
               >
-                <i className="fas fa-cart-plus"></i> Ajouter au Panier
+                <i className="fas fa-cart-plus me-1"></i> Ajouter
               </button>
             </div>
           </div>
