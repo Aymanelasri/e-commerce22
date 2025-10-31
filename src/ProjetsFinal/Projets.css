@@ -124,6 +124,13 @@ nav {
   animation-delay: 2s;
 }
 
+/* Override animation for specific pages */
+.no-animation .all-products {
+  opacity: 1;
+  animation: none;
+  animation-delay: 0s;
+}
+
 
 @keyframes fadeInSlide {
   from {

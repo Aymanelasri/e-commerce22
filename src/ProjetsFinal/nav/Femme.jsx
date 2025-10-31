@@ -1,11 +1,13 @@
 import '../Projets.css';
 import { Link } from "react-router-dom";
-import { useContext , useState } from "react";
+import { useContext , useState , useEffect} from "react";
 import { CartContext } from "../CartContext";
 
 export default function Femme() {
     const { addToCart } = useContext(CartContext);
     const [search, setSearch] = useState('');
+     const [loading, setLoading] = useState(true);
+
     
     const womenProducts = [
         {id:1,title:"Elegant Midi Dress",prix:300  ,description:"A lightweight printed midi dress that offers comfort and elegance for everyday wear or special occasions.",img:"/images/women/photo1.jpg" ,quantity:10},
@@ -23,9 +25,25 @@ export default function Femme() {
     const filteredProducts = womenProducts.filter(product =>
         product.title.toLowerCase().includes(search.toLowerCase())
     );
+      useEffect(() => {
+            const timer = setTimeout(() => {
+                setLoading(false);
+            }, 500);
+            
+            return () => clearTimeout(timer);
+        }, []);
+
+    if (loading) {
+        return (
+            <div className="d-flex justify-content-center align-items-center" style={{height: '50vh'}}>
+                <div className="spinner-border text-primary" role="status">  
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <main>
+        <main className="no-animation">
             <section className="all-products">
                 <h2 className="text-center mt-5 my-5  pt-5" style={{ fontFamily: 'roboto' }}>COLLECTION FEMME</h2>
                 <div className="d-flex justify-content-center mb-4">

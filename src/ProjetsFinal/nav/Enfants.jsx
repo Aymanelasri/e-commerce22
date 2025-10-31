@@ -1,11 +1,12 @@
 import '../Projets.css';
 import { Link } from "react-router-dom";
-import { useContext , useState } from "react";
+import { useContext , useState, useEffect } from "react";
 import { CartContext } from "../CartContext";
 
 export default function Enfants() {
     const { addToCart } = useContext(CartContext);
     const [search, setSearch] = useState('');
+    const [loading, setLoading] = useState(true);
     
     const kidsProducts = [
         {id:1,title:"Graphic T-Shirt",prix:150 ,description:"A fun graphic t-shirt with colorful prints, perfect for everyday wear.",img:"/images/kids/photo1.jpg" , quantity:30},
@@ -24,8 +25,26 @@ export default function Enfants() {
         product.title.toLowerCase().includes(search.toLowerCase())
     );
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 500);
+        
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="d-flex justify-content-center align-items-center" style={{height: '50vh'}}>
+                <div className="spinner-border text-primary" role="status">
+                    
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <main>
+        <main className="no-animation">
             <section className="all-products">
                 <h2 className="text-center mt-5 my-5  pt-5" style={{ fontFamily: 'roboto' }}>COLLECTION ENFANTS</h2>
                 <div className="d-flex justify-content-center mb-4">

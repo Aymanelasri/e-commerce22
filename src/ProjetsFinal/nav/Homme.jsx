@@ -28,7 +28,7 @@ export default function Homme() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        }, 500);
         
         return () => clearTimeout(timer);
     }, []);
@@ -37,14 +37,15 @@ export default function Homme() {
         return (
             <div className="d-flex justify-content-center align-items-center" style={{height: '50vh'}}>
                 <div className="spinner-border text-primary" role="status">
-                  
+                    
                 </div>
             </div>
         );
     }
 
     return (
-        <main>
+        <>
+        <main className="no-animation">
             <section className="all-products">
                 <h2 className="text-center mt-5 my-5  pt-5" style={{ fontFamily: 'roboto' }}>COLLECTION HOMME</h2>
                 <div className="d-flex justify-content-center mb-4">
@@ -70,9 +71,8 @@ export default function Homme() {
                                         <button className='btn btn-light'>
                                             <Link className='text-dark text-decoration-none' to="/Details">Voir Détails</Link>
                                         </button><br /><br />
-                                        <button className="btn btn-primary rounded-pill shadow-sm fw-semibold d-flex align-items-center gap-2" onClick={() => addToCart(product)}>
-                                            <i className="fas fa-cart-plus"></i>Ajouter au Panier
-                                        </button>
+                                        <button className="btn btn-primary rounded-pill shadow-sm  d-flex align-items-center gap-2" onClick={() => addToCart(product)}>
+                                            <i className="fas fa-cart-plus"></i>Ajouter au Panier</button>
                                     </div>
                                 </div>
                             </div>
@@ -80,6 +80,56 @@ export default function Homme() {
                     </div>
                 </div>
             </section>
+
+            {/* ------------------------------------------------------------------------------------------- */}
         </main>
+
+        <footer>
+    <div className="container">
+      <div className="row justify-content-between">
+       
+        <div className="col-md-4 mb-4">
+          <div className="footer-logo">CASA MODA</div>
+          <p className="footer-text">
+            La seconde-main, c’est l’avenir et CASA MODA te le prouve.
+            Sur CASA MODA, tu vends les vêtements qui ont encore des choses à vivre
+            et tu déniches des merveilles que tu ne trouves pas en boutique.
+          </p>
+        </div>
+
+        
+      <div className="col-md-3 mb-4">
+          <h6 className="footer-title">À PROPOS</h6>
+          <Link to="/faq" className="footer-link">FAQ</Link>
+          <Link to="/contact" className="footer-link">Contact</Link>
+          <Link to="/mentions-legales" className="footer-link">Mentions Légales</Link>
+          <Link to="/cgu" className="footer-link">CGU</Link>
+        </div>
+
+        <div className="col-md-3 mb-4">
+          <h6 className="footer-title">SUIVEZ-NOUS SUR</h6>
+          <div className="mb-3">
+            <Link to="/" className="social-icon">
+              <i className="fab fa-facebook-f"></i>
+            </Link>
+            <Link to="/" className="social-icon">
+              <i className="fab fa-instagram"></i>
+            </Link>
+            <Link to="/" className="social-icon">
+              <i className="fab fa-youtube"></i>
+            </Link>
+            
+          </div>
+
+          <Link to="/" className="footer-link">Besoin d aide ?</Link>
+          <Link to="/" className="footer-link">Comment vendre ?</Link>
+          <Link to="/" className="footer-link">Comment acheter</Link>
+       </div>
+      </div>
+    </div>
+  </footer>
+  </>
+
+        
     );
 }

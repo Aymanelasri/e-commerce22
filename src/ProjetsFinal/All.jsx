@@ -101,24 +101,23 @@ export default function All() {
               alt={product.title}
             />
             <div className="card-body d-flex flex-column">
-              {/* Title مع ارتفاع ثابت */}
+              
               <h5 className="card-title" style={{ minHeight: "3rem", overflow: "hidden", textOverflow: "ellipsis" }}>
                 {product.title}
               </h5>
 
               <p className="card-text">
-                <strong>PRIX :</strong> {product.prix} $
-              </p>
+                <strong>PRIX :</strong> {product.prix} $</p>
 
-              {/* Button Voir Détails بعرض كامل */}
+            
               <Link
-                to="/Details"
+                to={`/details/${product.id}`}
                 className="btn btn-light mb-2 w-100 text-dark text-decoration-none d-flex justify-content-center"
               >
                 Voir Détails
               </Link>
 
-              {/* Button Ajouter au Panier ثابت في الأسفل وملأ عرض card */}
+              
               <button
                 className="btn btn-primary mt-auto rounded-pill shadow-sm fw-semibold d-flex align-items-center justify-content-center gap-2 w-100"
                 style={{ minHeight: "40px" }} 

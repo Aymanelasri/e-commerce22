@@ -6,6 +6,7 @@ import All from "./All";
 import Homme from "./nav/Homme";
 import Femme from "./nav/Femme";
 import Enfants from "./nav/Enfants";
+import Details from "./Details";
 import { CartProvider } from "./CartContext"; 
          
 
@@ -24,6 +25,7 @@ export default function Projets() {
             <Route path="nav/Enfants" element={<Enfants />} />
             <Route path="cart" element={<Cart />} />
             <Route path="login" element={<Login />} />
+            <Route path="Details/:id" element={<Details />} />
           </Route>
         </Routes>
       </BrowserRouter>
