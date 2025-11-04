@@ -48,6 +48,12 @@ export default function Homme() {
         <main className="no-animation">
             <section className="all-products">
                 <h2 className="text-center mt-5 my-5  pt-5" style={{ fontFamily: 'roboto' }}>COLLECTION HOMME</h2>
+                  <div>
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+
+                </div>
                 <div className="d-flex justify-content-center mb-4">
                     <input 
                         type="search" 
