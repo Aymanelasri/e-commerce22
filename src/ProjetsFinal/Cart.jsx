@@ -1,14 +1,18 @@
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
-
 import "@fontsource/roboto";
 import "@fontsource/poppins";
 
 
 export default function Cart() {
   const { cartItems, removeFromCart } = useContext(CartContext);
+  const [showPayment, setShowPayment] = useState(false);
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [cardName, setCardName] = useState('');
 
   const total = cartItems.reduce((sum, item) => {
     const price = Number(item.prix) || 0;
@@ -26,7 +30,7 @@ export default function Cart() {
       <div className="container-fluid p-0">
         <div className="cart-container">
 
-          <div className="cart-header">
+          <div className="cart-header" >
             <h1 className="h3 mb-0"><i className="fas fa-shopping-cart me-2"></i>PANIER</h1>
           </div>
 
@@ -43,7 +47,7 @@ export default function Cart() {
               {/* items list */}
               <div className="cart-items mb-4">
                 {cartItems.map((item, index) => {
-                  const id = item.id || item._id || index;
+                  const id = item.id || index;
                   
                   const price = Number(item.prix) || 0;
                   const qty = Number(item.quantity) || 1;
@@ -65,7 +69,7 @@ export default function Cart() {
                 })}
               </div>
 
-              {/* gift + summary */}
+             
               <div className="gift-section mb-4">
                 <h4 className="h5 mb-2"><i className="fas fa-gift me-2 text-warning"></i>NOTRE CADEAU DÈS 500 DH D'ACHAT</h4>
                 <p className="mb-1">Un accessoire exclusif signé Casa Moda</p>
@@ -87,12 +91,12 @@ export default function Cart() {
 
                 
 
-                <button className="btn checkout-btn text-white w-100 mt-4">
+                <button className="btn checkout-btn text-white w-100 mt-4" onClick={() => setShowPayment(true)}>
                   Valider et passer au paiement
                 </button>
               </div>
 
-              {/* features */}
+             
               <div className="features-section mt-4">
                 <div className="row">
                   <div className="col-md-4 feature-item">
@@ -119,6 +123,48 @@ export default function Cart() {
           )}
         </div>
       </div>
+
+      {/* Payment Modal */}
+      {showPayment && (
+        <div className="modal show d-block" style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Paiement sécurisé</h5>
+                <button type="button" className="btn-close" onClick={() => setShowPayment(false)}></button>
+              </div>
+              <div className="modal-body">
+                <div className="mb-3">
+                  <label className="form-label">Numéro de carte</label>
+                  <input type="text" className="form-control" placeholder="1234 5678 9012 3456" maxLength="19" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                </div>
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">Date d'expiration</label>
+                    <input type="text" className="form-control" placeholder="MM/AA" maxLength="5" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">CVV</label>
+                    <input type="text" className="form-control" placeholder="123" maxLength="3" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Nom sur la carte</label>
+                  <input type="text" className="form-control"  value={cardName} onChange={(e) => setCardName(e.target.value)} />
+                </div>
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <span>Total à payer:</span>
+                  <strong className="text-primary">{total.toFixed(2)} DH</strong>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setShowPayment(false)}>Annuler</button>
+                <button type="button" className="btn btn-primary" >Confirmer le paiement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function Homme() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 500);
+        }, 300);
         
         return () => clearTimeout(timer);
     }, []);
@@ -69,7 +69,14 @@ export default function Homme() {
                         {filteredProducts.map(product => (
                             <div key={product.id} className="col-6 col-md-4 col-lg-3 mb-4">
                                 <div className="card h-100">
-                                    <img src={product.img} className="card-img-top" alt={product.title} />
+                                    <Link to={`/Details/${product.id}`}>
+                                      <img
+                                        src={product.img}
+                                        className="card-img-top"
+                                        alt={product.title}
+                                        style={{ cursor: "pointer" }}
+                                      />
+                                    </Link>
                                     <div className="card-body">
                                         <h5 className="card-title">{product.title}</h5>
                                         <p className="card-text"><strong>PRIX : </strong><strong>{product.prix} DH</strong></p>

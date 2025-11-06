@@ -69,21 +69,21 @@ export default function All() {
 
   {/* All Products Section */}
   <section className="all-products">
-    <h2 className="text-center my-4" style={{ fontFamily: 'roboto',  }}>ALL PRODUCTS</h2>
+    <h2 className="text-center my-4" style={{ fontFamily: 'roboto', fontSize: '2.7vh'  }}>ALL PRODUCTS</h2>
     <div className="container d-flex text-center mb-4 justify-content-around">
       <div>
         <img className='imgc' id='img1' src="/images/3img/men2.jpg" alt="" />
-        <h3>Homme</h3>
+        <h4>Homme</h4>
 
       </div>
       <div>
         <img className='imgc' src="/images/3img/women.jpg" alt="" />
-        <h3>Femme</h3>
+        <h4>Femme</h4>
 
       </div>
       <div>
         <img className='imgc' src="/images/3img/kids.jpg" alt="" />
-        <h3>Enfants</h3>
+        <h4>Enfants</h4>
       </div>
      
 
@@ -109,7 +109,7 @@ export default function All() {
               </h5>
 
               <p className="card-text">
-                <strong>PRIX :</strong> {product.prix} $</p>
+                <strong>PRIX :</strong> {product.prix} DH</p>
 
             
               <Link
@@ -150,7 +150,7 @@ export default function All() {
         <div className="col-md-4 feature">
           <h5 className="fw-bold">La mode à petit prix.</h5>
           <p>
-            Vous pouvez avoir une différence allant jusqu’à -70% moins cher comparé au même produit neuf.
+            Vous pouvez avoir une différence allant jusqu'à -70% moins cher comparé au même produit neuf.
             Cela vaut le coût pour faire des économies sur votre budget shopping.
           </p>
         </div>
@@ -177,14 +177,14 @@ export default function All() {
   </section>
 </main>
 {/* ----------------------------------------------------------------------------------------------- */}
-  <footer>
+  <footer >
     <div className="container">
       <div className="row justify-content-between">
        
         <div className="col-md-4 mb-4">
           <div className="footer-logo">CASA MODA</div>
           <p className="footer-text">
-            La seconde-main, c’est l’avenir et CASA MODA te le prouve.
+            La seconde-main, c'est l'avenir et CASA MODA te le prouve.
             Sur CASA MODA, tu vends les vêtements qui ont encore des choses à vivre
             et tu déniches des merveilles que tu ne trouves pas en boutique.
           </p>
@@ -214,7 +214,7 @@ export default function All() {
             
           </div>
 
-          <Link to="/" className="footer-link">Besoin d’aide ?</Link>
+          <Link to="/" className="footer-link">Besoin d'aide ?</Link>
           <Link to="/" className="footer-link">Comment vendre ?</Link>
           <Link to="/" className="footer-link">Comment acheter</Link>
        </div>

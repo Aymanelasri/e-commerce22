@@ -279,9 +279,7 @@ nav {
     font-size: 10px;
     
   }
-  img h3{
-    font-size: 41px;
-  }
+  
 
   
 }
@@ -328,7 +326,7 @@ nav {
         }
         
         .cart-header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background:  #f57839;
             color: white;
             padding: 20px;
             text-align: center;
@@ -470,7 +468,7 @@ nav {
     }
     .footer-link {
       display: block;
-      color: #999;
+      color: #666;
       text-decoration: none;
       margin-bottom: 10px;
       transition: color 0.3s ease;
