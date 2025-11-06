@@ -61,7 +61,7 @@ export default function Login() {
                 <input className="form-check-input" type="checkbox" id="rememberMe" />
                 <label className="form-check-label" htmlFor="rememberMe">Se souvenir de moi</label>
               </div>
-              <a href="#"><button type="button" className="btn p-0 border-0 bg-transparent text-primary" style={{textDecoration: 'none'}}>Mot de passe oublié ?</button></a>
+              <button type="button" className="btn p-0 border-0 bg-transparent text-primary" style={{textDecoration: 'none'}}>Mot de passe oublié ?</button>
             </div>
           ) : (
             <div className="form-check mb-3">

@@ -1,8 +1,6 @@
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
-
-
 
 export default function Details() {
     const {id}=useParams();
