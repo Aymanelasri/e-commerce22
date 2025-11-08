@@ -135,22 +135,22 @@ export default function Cart() {
               </div>
               <div className="modal-body">
                 <div className="mb-3">
-                  <label className="form-label">Numéro de carte</label>
-                  <input type="text" className="form-control" placeholder="1234 5678 9012 3456" maxLength="19" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                  <label className="form-label" htmlFor="cardNumber">Numéro de carte</label>
+                  <input type="text" className="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" maxLength="19" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
                 </div>
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <label className="form-label">Date d'expiration</label>
-                    <input type="text" className="form-control" placeholder="MM/AA" maxLength="5" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                    <label className="form-label" htmlFor="expiryDate">Date d'expiration</label>
+                    <input type="text" className="form-control" id="expiryDate" placeholder="MM/AA" maxLength="5" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
                   </div>
                   <div className="col-md-6 mb-3">
-                    <label className="form-label">CVV</label>
-                    <input type="text" className="form-control" placeholder="123" maxLength="3" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                    <label className="form-label" htmlFor="cvv">CVV</label>
+                    <input type="text" className="form-control" id="cvv" placeholder="123" maxLength="3" value={cvv} onChange={(e) => setCvv(e.target.value)} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Nom sur la carte</label>
-                  <input type="text" className="form-control"  value={cardName} onChange={(e) => setCardName(e.target.value)} />
+                  <label className="form-label" htmlFor="cardName">Nom sur la carte</label>
+                  <input type="text" className="form-control" id="cardName" value={cardName} onChange={(e) => setCardName(e.target.value)} />
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <span>Total à payer:</span>

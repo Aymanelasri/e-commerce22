@@ -49,9 +49,9 @@ export default function Homme() {
             <section className="all-products">
                 <h2 className="text-center mt-5 my-5  pt-5" style={{ fontFamily: 'roboto' }}>COLLECTION HOMME</h2>
                   <div>
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
+                <div className="circle circle1"></div>
+                <div className="circle circle2"></div>
+                <div className="circle circle3"></div>
 
                 </div>
                 <div className="d-flex justify-content-center mb-4">
@@ -109,7 +109,7 @@ export default function Homme() {
         <div className="col-md-4 mb-4">
           <div className="footer-logo">CASA MODA</div>
           <p className="footer-text">
-            La seconde-main, c’est l’avenir et CASA MODA te le prouve.
+            La seconde-main, c'est l'avenir et CASA MODA te le prouve.
             Sur CASA MODA, tu vends les vêtements qui ont encore des choses à vivre
             et tu déniches des merveilles que tu ne trouves pas en boutique.
           </p>
