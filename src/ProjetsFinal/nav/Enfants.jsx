@@ -78,19 +78,19 @@ export default function Enfants() {
                                             loading="lazy"
                                         />
                                     </Link>
-                                    <div className="card-body">
+                                    <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{product.title}</h5>
                                         <p className="card-text"><strong>PRIX : </strong><strong>{product.prix} DH</strong></p>
                                         
-                                        <button className='btn btn-light'>
-                                            <Link className='text-dark text-decoration-none' to={`/details/${product.id}`}>Voir Détails</Link>
-                                        </button><br /><br />
-                                         <button
-                                            className="btn btn-success btn-sm w-100"
-                                              onClick={() => addToCart(product)}
-                                             >
-                                            <i className="fas fa-cart-plus me-1"></i> Ajouter
-                                        </button>
+                                        <div className="mt-auto">
+                                            <Link className='btn btn-light w-100 mb-2 text-dark text-decoration-none' to={`/details/${product.id}`}>Voir Détails</Link>
+                                            <button
+                                                className="btn btn-success btn-sm w-100"
+                                                onClick={() => addToCart(product)}
+                                                >
+                                                <i className="fas fa-cart-plus me-1"></i> Ajouter
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

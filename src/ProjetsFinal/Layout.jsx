@@ -33,7 +33,7 @@ export default function Layout() {
                 <h2 className="d-none d-sm-block" style={{ color: '#ff5500', fontFamily: 'calibri', letterSpacing: '1px', margin: 0, fontSize: '24px' }}>
                     CASA MODA
                 </h2>
-                <img id='logo' className='d-block d-sm-none pt-2' style={{ width: "90px", height: "70px", display:"none"}} src="cm2.png" alt="" />
+                <img id='logo' className='d-block d-sm-none pt-2' style={{ width: "90px", height: "70px" }} src="cm2.jpg" alt="" />
 
                 <ul className="nav justify-content-center flex-grow-1" id="nav">
                     <li className="nav-item menu"><Link className="nav-link fs-5 underline-hover text-dark" to="/">All</Link></li>

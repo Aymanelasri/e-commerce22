@@ -58,7 +58,7 @@ export default function All() {
   {/* Video Section */}
   <section className="video-container">
     <video  autoPlay muted loop playsInline preload="auto" className="video-full">
-      <source src="video2.webm" type="video/webm" />
+      <source src="video2.mp4" type="video/mp4" />
     </video>
     <div className="video-text">
        <h1>La mode pour toute la famille</h1>
@@ -104,28 +104,27 @@ export default function All() {
               />
             </Link>
             <div className="card-body d-flex flex-column">
-              
               <h5 className="card-title" style={{ minHeight: "3rem", overflow: "hidden", textOverflow: "ellipsis" }}>
                 {product.title}
               </h5>
-
               <p className="card-text">
-                <strong>PRIX :</strong> {product.prix} DH</p>
-
-            
-              <Link
-                to={`/Details/${product.id}`}
-                className="btn btn-light mb-2 w-100 text-dark text-decoration-none d-flex justify-content-center"
-              >
-                Voir Détails
-              </Link>
-
-              <button
-                className="btn btn-success btn-sm w-100"
-                onClick={() => addToCart(product)}
-              >
-                <i className="fas fa-cart-plus me-1"></i> Ajouter
-              </button>
+                <strong>PRIX :</strong> {product.prix} DH
+              </p>
+              
+              <div className="mt-auto">
+                <Link
+                  to={`/Details/${product.id}`}
+                  className="btn btn-light mb-2 w-100 text-dark text-decoration-none d-flex justify-content-center"
+                >
+                  Voir Détails
+                </Link>
+                <button
+                  className="btn btn-success btn-sm w-100"
+                  onClick={() => addToCart(product)}
+                >
+                  <i className="fas fa-cart-plus me-1"></i> Ajouter
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -12,6 +12,56 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [Message, setMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+    
+    if (isSignup) {
+      // Validation for signup
+      if (!fullName || !email || !password || !confirmPassword) {
+        setErrorMessage('Veuillez remplir tous les champs');
+        return;
+      }
+      
+      if (password !== confirmPassword) {
+        setErrorMessage('Les mots de passe ne correspondent pas');
+        return;
+      }
+      
+      if (password.length < 6) {
+        setErrorMessage('Le mot de passe doit contenir au moins 6 caractères');
+        return;
+      }
+      
+      if (!termsAccepted) {
+        setErrorMessage('Vous devez accepter les termes et conditions');
+        return;
+      }
+      
+      // Success
+      setMessage(true);
+      setFullName('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setTermsAccepted(false);
+      
+      setTimeout(() => {
+        setMessage(false);
+        setIsSignup(false);
+      }, 2000);
+    } else {
+      
+      if (!email || !password) {
+        setErrorMessage('Veuillez remplir tous les champs');
+        return;
+      }
+    }
+  };
 
   return (
     <div className="login-page d-flex justify-content-center align-items-center  vh-100">
@@ -25,10 +75,26 @@ export default function Login() {
           <div className="user-icon mb-2">
             <i className="bi bi-person-circle" style={{ fontSize: '30px', color: '#ff5500' }}></i>
           </div>
+
           <h3>{isSignup ? 'Créer un compte' : 'Connexion'}</h3>
           <p>{isSignup ? 'Rejoignez-nous aujourd\'hui et commencez votre voyage' : 'Entrez vos identifiants pour accéder à votre compte'}</p>
         </div>
-        <form>
+        
+
+        {Message && (
+          <div className="alert alert-success text-center mb-4">
+            <i className="bi bi-check-circle me-2"></i>
+            Compte créé avec succès ! Redirection vers la connexion...
+          </div>
+        )}
+        
+        {errorMessage && (
+          <div className="alert alert-danger text-center mb-4">
+            <i className="bi bi-exclamation-triangle me-2"></i>
+            {errorMessage}
+          </div>
+        )}
+        <form onSubmit={handleSubmit}>
           {isSignup && (
             <div className="mb-3">
               <label htmlFor="fullName">Nom complet</label>
@@ -65,7 +131,7 @@ export default function Login() {
             </div>
           ) : (
             <div className="form-check mb-3">
-              <input className="form-check-input" type="checkbox" id="terms" />
+              <input className="form-check-input" type="checkbox" id="terms" checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} />
               <label className="form-check-label" htmlFor="terms">
                 J'accepte les <button type="button" className="btn p-0 border-0 bg-transparent text-primary" style={{textDecoration: 'none'}}>Termes et Conditions</button>
               </label>
