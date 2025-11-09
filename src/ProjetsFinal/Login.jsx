@@ -83,14 +83,14 @@ export default function Login() {
 
         {Message && (
           <div className="alert alert-success text-center mb-4">
-            <i className="bi bi-check-circle me-2"></i>{' '}
+            
             Compte créé avec succès ! Redirection vers la connexion...
           </div>
         )}
         
         {errorMessage && (
           <div className="alert alert-danger text-center mb-4">
-            <i className="bi bi-exclamation-triangle me-2"></i>{' '}
+            
             {errorMessage}
           </div>
         )}

@@ -77,12 +77,12 @@ export default function All() {
 
       </div>
       <div>
-        <img className='imgc' src="/images/3img/women.webp" alt="" loading="lazy" />
+        <img className='imgc' src="/images/3img/women.Webp" alt="" loading="lazy" />
         <h4>Femme</h4>
 
       </div>
       <div>
-        <img className='imgc' src="/images/3img/kids.webp" alt="" loading="lazy" />
+        <img className='imgc' src="/images/3img/kids.Webp" alt="" loading="lazy" />
         <h4>Enfants</h4>
       </div>
      
