@@ -72,7 +72,7 @@ export default function All() {
     <h2 className="text-center my-4" style={{ fontFamily: 'roboto', fontSize: '2.7vh'  }}>ALL PRODUCTS</h2>
     <div className="container d-flex text-center mb-4 justify-content-around">
       <div>
-        <img className='imgc' id='img1' src="/images/3img/men2.webp" alt="" loading="lazy" />
+        <img className='imgc' id='img1' src="/images/3img/men2.Webp" alt="" loading="lazy" />
         <h4>Homme</h4>
 
       </div>
