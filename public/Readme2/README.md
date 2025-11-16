@@ -1,12 +1,11 @@
 # CASA MODA - E-commerce React
-
 ## 📋 Table des Matières
-- [Aperçu du Projet](#aperçu-du-projet)
-- [Architecture Technique](#architecture-technique)
-- [Fonctionnalités Détaillées](#fonctionnalités-détaillées)
-- [Structure des Composants](#structure-des-composants)
-- [Gestion d'État](#gestion-détat)
-- [Guide d'Installation](#guide-dinstallation)
+- [Aperçu du Projet](#README.md#L12)
+- [Architecture Technique](#README.md#L33)
+- [Fonctionnalités Détaillées](#README.md#L41)
+- [Structure des Composants](#README.md#L68)
+- [Gestion d'État](#README.md#L156)
+- [Guide d'Installation](#README.md#L176)
 
 ---
 
@@ -15,7 +14,8 @@
 **CASA MODA** est une mini-boutique construite avec **React**.  
 Cette application permet aux utilisateurs de parcourir les produits pour hommes, femmes et enfants, de consulter les détails, d’ajouter des articles au panier .
 
-**live Demo :** 
+🔗 **Live Demo :** [https://casamoda07.netlify.app/](https://casamoda07.netlify.app/)
+
 
 ---
 
@@ -31,9 +31,9 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 ---
 
 ## Architecture Technique
-- **Frontend**: React 18 avec Hooks et Context API
-- **Routing**: React Router v6 pour la navigation SPA
-- **Styling**: Bootstrap 5 + CSS personnalisé
+- **Frontend**: React  avec Hooks et Context API
+- **Routing**: React Router pour la navigation SPA
+- **Styling**: Bootstrap  + CSS personnalisé
 - **Images**: Format WebP pour l'optimisation
 - **State Management**: Context API pour l'état global
 
@@ -101,14 +101,35 @@ Sinon, le produit est ajouté avec quantity = 1.
 [<img src="image-5.png" alt="CartContext code" width="300">](image-5.png)
 ---
 
-[<img src="image-6.png" alt="CartContext implementation" width="300">](image-6.png)
--
+
+## Navbar
+
+
+[<img src="image-9.png" alt="Cart component" width="400">](image-9.png)
+
+- La **barre de navigation** contient toutes les catégories :  
+  - **Homme**  
+  - **Femme**  
+  - **Enfants**  
+
+- Les utilisateurs peuvent **cliquer sur chaque catégorie** pour voir uniquement les produits correspondants.  
+
+- Une **barre de recherche** permet de filtrer les produits en temps réel par titre .  
+
+- Le Navbar est **responsive** :
+  - Menu mobile pour petits écrans  
+  - Design clair et intuitif pour la navigation sur tous les devices
+
 
 ---
 ### cart.jsx 
-[<img src="image-2.png" alt="Cart component" width="400">](image-2.png)
+[<img src="image-1.png" alt="Cart component" width="500">](image-1.png)
+
 
 * Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
+
+
+[<img src="image10.png" alt="Cart component" width="400">](image10.png)
 
 ---
 ---
@@ -118,12 +139,18 @@ Sinon, le produit est ajouté avec quantity = 1.
 * Il peut supprimer facilement n’importe quel produit.
 * L’affichage est clair et esthétique grâce aux classes Bootstrap.
 
+[<img src="image-6.png" alt="CartContext implementation" width="400">](image-6.png)
+
 ---
 ### Gestion des Produits 
-[<img src="image-4.png" alt="Product management" width="400">](image-4.png)
+
+[<img src="image.png" alt="Product management" width="400">](image.png)
 * On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
 * Permet de trouver un produit précis selon son id, utile pour afficher les détails d’un produit sur la page Details/:id
+
+
+[<img src="image-7.png"  width="400">](image-7.png)
 
 --- 
 ## Gestion d'État
@@ -161,5 +188,6 @@ npm start
 
 ---
 
+## 👥 Contributeurs
 
-
+- **Développeur Principal** : Ayman Elasri
