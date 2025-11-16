@@ -13,12 +13,47 @@ export default function Cart() {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [cardName, setCardName] = useState('');
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [paymentError, setPaymentError] = useState('');
 
   const total = cartItems.reduce((sum, item) => {
-    const price = Number(item.prix) || 0;
-    const qty = Number(item.quantity) || 1;
+    const price = Number(item.prix) ;
+    const qty = Number(item.quantity) ;
     return sum + price * qty;
   }, 0);
+
+  const handlePayment = () => {
+    setPaymentError('');
+    
+    
+    if (!cardNumber || !expiryDate || !cvv || !cardName) {
+      setPaymentError('Veuillez remplir tous les champs');
+      return;
+    }
+    
+    if (cardNumber.length < 16) {
+      setPaymentError('Numéro de carte invalide');
+      return;
+    }
+    
+    if (cvv.length < 3) {
+      setPaymentError('CVV invalide');
+      return;
+    }
+    
+    
+    setPaymentSuccess(true);
+    
+    
+    setTimeout(() => {
+      setPaymentSuccess(false);
+      setShowPayment(false);
+      setCardNumber('');
+      setExpiryDate('');
+      setCvv('');
+      setCardName('');
+    }, 3000);
+  };
 
   return (
     <div className="container mt-4">
@@ -134,14 +169,28 @@ export default function Cart() {
                 <button type="button" className="btn-close" onClick={() => setShowPayment(false)}></button>
               </div>
               <div className="modal-body">
+                {paymentSuccess && (
+                  <div className="alert alert-success text-center mb-4">
+                    
+                    Paiement effectué avec succès ! Merci pour votre achat.
+                  </div>
+                )}
+                
+                {paymentError && (
+                  <div className="alert alert-danger text-center mb-4">
+                    
+                    {paymentError}
+                  </div>
+                )}
+                
                 <div className="mb-3">
                   <label className="form-label" htmlFor="cardNumber">Numéro de carte</label>
-                  <input type="text" className="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" maxLength="19" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                  <input type="text" className="form-control" id="cardNumber" placeholder="1234 5678 9012 3456"  value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
                 </div>
                 <div className="row">
                   <div className="col-md-6 mb-3">
                     <label className="form-label" htmlFor="expiryDate">Date d'expiration</label>
-                    <input type="text" className="form-control" id="expiryDate" placeholder="MM/AA" maxLength="5" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                    <input type="text" className="form-control" id="expiryDate" placeholder="MM/AA"  value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
                   </div>
                   <div className="col-md-6 mb-3">
                     <label className="form-label" htmlFor="cvv">CVV</label>
@@ -159,7 +208,9 @@ export default function Cart() {
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={() => setShowPayment(false)}>Annuler</button>
-                <button type="button" className="btn btn-primary" >Confirmer le paiement</button>
+                <button type="button" className="btn btn-primary" onClick={handlePayment} disabled={paymentSuccess}>
+                  {paymentSuccess ? 'Paiement réussi !' : 'Confirmer le paiement'}
+                </button>
               </div>
             </div>
           </div>

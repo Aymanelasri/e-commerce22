@@ -1,6 +1,6 @@
 # CASA MODA - E-commerce React 
 
-![Screenshot](screenshot_small.png)
+
 
 ## Description
 **CASA MODA** est une mini-boutique construite avec **React**.  
@@ -47,11 +47,15 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 
 ## CartContext ![Screenshot de l'application](image-1.png)
 
--cartItems est le tableau contenant tous les produits dans le panier.
+
+
+* cartItems   est le tableau contenant tous les produits dans le panier.
 Si le produit est déjà dans le panier, la quantité augmente de 1.
-Sinon, le produit est ajouté avec quantity = 1.
+Sinon, le produit est ajouté avec quantity = 1. 
+![alt text](image-5.png)
+![alt text](image-6.png)
 -
-au return => C’est le mécanisme qui permet partager l’état du panier et ses fonctions à travers toute l’application React sans passer par des props à chaque composant.
+
 
  ## cart.jsx ![alt text](image-2.png)
 -Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
@@ -72,13 +76,13 @@ au return => C’est le mécanisme qui permet partager l’état du panier et se
 
 ## Projets.jsx ![alt text](image-3.png)
 
---Layout : Le composant principal qui contient l’en-tête, l’espace pour afficher le contenu selon la route.
--- All : Page affichant tous les produits.
--- Homme, Femme, Enfants : Pages affichant les      produits par catégorie.
--- Cart : Page du panier avec la liste des produits ajoutés.
--- Login : Page de connexion de l’utilisateur. --Details/:id : Page affichant les détails d’un produit spécifique selon son ID
+* Layout : Le composant principal qui contient l’en-tête, l’espace pour afficher le contenu selon la route.
+* All : Page affichant tous les produits.
+* Homme, Femme, Enfants : Pages affichant les      produits par catégorie.
+* Cart : Page du panier avec la liste des produits ajoutés.
+* Login : Page de connexion de l’utilisateur. --Details/:id : Page affichant les détails d’un produit spécifique selon son ID
 
-*CartProvider :  est le composant qui englobe toute l’application pour fournir ce contexte à tous les composants enfants. rend l’état du panier et les fonctions pour ajouter ou supprimer des produits accessibles depuis n’importe quel composant de l’application.
+* CartProvider :  est le composant qui englobe toute l’application pour fournir ce contexte à tous les composants enfants. rend l’état du panier et les fonctions pour ajouter ou supprimer des produits accessibles depuis n’importe quel composant de l’application.
 
 
 
