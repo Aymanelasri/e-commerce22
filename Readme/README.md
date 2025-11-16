@@ -1,12 +1,12 @@
 # CASA MODA - E-commerce React
 
 ## 📋 Table des Matières
-- [Aperçu du Projet](README.md#L15)
-- [Architecture Technique](README.md#L30)
-- [Fonctionnalités Détaillées](README.md#L38)
-- [Structure des Composants](README.md#L56)
-- [Gestion d'État](README.md#L95)
-- [Guide d'Installation](README.md#L110)
+- [Aperçu du Projet](README.md#L14)
+- [Architecture Technique](README.md#L34)
+- [Fonctionnalités Détaillées](README.md#L57)
+- [Structure des Composants](README.md#L69)
+- [Gestion d'État](README.md#L107)
+- [Guide d'Installation](README.md#L127)
 -
 
 ---
@@ -69,7 +69,30 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 ## Structure des Composants
 
 ### CartContext 
-[<img src="image-1.png" alt="Screenshot de l'application" width="400">](image-1.png)
+
+ const [cartItems, setCartItems] = useState([]);
+ 
+
+    const addToCart = (product) => {
+    setCartItems((prev) => {
+      const existing = prev.find((item) => item.id === product.id);
+      if (existing) {
+      
+        return prev.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            : item
+        );
+      } else {
+        
+        return [...prev, { ...product, quantity: 1 }];
+      }
+
+      
+    });
+  };
+
+
 
 ---
 
