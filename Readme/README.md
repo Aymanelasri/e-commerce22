@@ -1,14 +1,13 @@
 # CASA MODA - E-commerce React
 
 ## 📋 Table des Matières
-- [Aperçu du Projet](#aperçu-du-projet)
-- [Architecture Technique](#architecture-technique)
-- [Fonctionnalités Détaillées](#fonctionnalités-détaillées)
-- [Structure des Composants](#structure-des-composants)
-- [Gestion d'État](#gestion-détat)
-- [Guide d'Installation](#guide-dinstallation)
-- [Scripts Disponibles](#scripts-disponibles)
-- [Optimisations](#optimisations)
+- [Aperçu du Projet](README.md#L15)
+- [Architecture Technique](README.md#L30)
+- [Fonctionnalités Détaillées](README.md#L38)
+- [Structure des Composants](README.md#L56)
+- [Gestion d'État](README.md#L95)
+- [Guide d'Installation](README.md#L110)
+-
 
 ---
 
@@ -16,6 +15,8 @@
 
 **CASA MODA** est une mini-boutique construite avec **React**.  
 Cette application permet aux utilisateurs de parcourir les produits pour hommes, femmes et enfants, de consulter les détails, d’ajouter des articles au panier .
+
+**live Demo :** 
 
 ---
 
@@ -68,7 +69,7 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 ## Structure des Composants
 
 ### CartContext 
-<img src="image-1.png" alt="Screenshot de l'application" width="400">
+[<img src="image-1.png" alt="Screenshot de l'application" width="400">](image-1.png)
 
 ---
 
@@ -77,17 +78,19 @@ Si le produit est déjà dans le panier, la quantité augmente de 1.
 Sinon, le produit est ajouté avec quantity = 1. 
 ---
 ---
-<img src="image-5.png" alt="CartContext code" width="300">
-<img src="image-6.png" alt="CartContext implementation" width="300">
+[<img src="image-5.png" alt="CartContext code" width="300">](image-5.png)
+---
+
+[<img src="image-6.png" alt="CartContext implementation" width="300">](image-6.png)
 -
 
 
 ### cart.jsx 
-<img src="image-2.png" alt="Cart component" width="400">
+[<img src="image-2.png" alt="Cart component" width="400">](image-2.png)
 -Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
 
 
-<img src="image.png" alt="Cart interface" width="400">
+[<img src="image.png" alt="Cart interface" width="400">](image.png)
 -L’utilisateur voit tous les produits ajoutés au panier.
 -Il peut consulter la quantité, le prix et le sous-total de chaque produit.
 -Il peut supprimer facilement n’importe quel produit.
@@ -95,7 +98,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 
 
 ### Gestion des Produits 
-<img src="image-4.png" alt="Product management" width="400">
+[<img src="image-4.png" alt="Product management" width="400">](image-4.png)
 -On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
 -Permet de trouver un produit précis selon son id, utile pour afficher les détails d’un produit sur la page Details/:id
@@ -104,7 +107,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 ## Gestion d'État
 
 ### Projets.jsx 
-<img src="image-3.png" alt="Project structure" width="400">
+[<img src="image-3.png" alt="Project structure" width="400">](image-3.png)
 
 * Layout : Le composant principal qui contient l’en-tête, l’espace pour afficher le contenu selon la route.
 * All : Page affichant tous les produits.
@@ -125,7 +128,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 
 ```bash
 # Cloner le repository
-git clone [url-du-repo]
+git clone https://github.com/Aymanelasri/e-commerce22.git
 
 # Installer les dépendances
 npm install
@@ -136,19 +139,5 @@ npm start
 
 ---
 
-## Scripts Disponibles
 
-- `npm start` - Lance l'application en mode développement
-- `npm run build` - Crée une version optimisée pour la production
-- `npm test` - Lance les tests
-- `npm run eject` - Éjecte la configuration (irréversible)
 
----
-
-## Optimisations
-
-- **Images WebP** pour un chargement plus rapide
-- **Lazy Loading** des composants avec React.lazy()
-- **Context API** pour éviter le prop drilling
-- **Bootstrap** pour un design responsive
-- **Code splitting** automatique avec Create React App
