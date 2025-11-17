@@ -72,13 +72,13 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
   
 
 ---
-const [cartItems, setCartItems] = useState([]);
- const addToCart = (product) => {
-    setCartItems((prev) => {
+      const [cartItems, setCartItems] = useState([]);
+      const addToCart = (product) => {
+      setCartItems((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
       
-        return prev.map((item) =>
+      return prev.map((item) =>
           item.id === product.id
             ? { ...item, quantity: (item.quantity || 1) + 1 }
             : item
@@ -129,7 +129,8 @@ Sinon, le produit est ajouté avec quantity = 1.
 * Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
 
 
-[<img src="image10.png" alt="Cart component" width="400">](image10.png)
+[<img src="image-11.png" alt="Cart component" width="400">](image-11.png)
+
 
 ---
 ---
