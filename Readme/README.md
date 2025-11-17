@@ -140,7 +140,7 @@ const addToCart = (product) => {
 
 ---
 ### Gestion des Produits 
-
+```javascript
 const {id}=useParams();
 const products = {
     women: [
@@ -159,7 +159,7 @@ const products = {
 }
 const allProducts=[...products.women,...products.men,...products.kids]
 const pr=allProducts.find(p=>p.id===Number(id))
----
+```
 ---
 * On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
