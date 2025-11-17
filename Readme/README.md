@@ -1,11 +1,11 @@
 # CASA MODA - E-commerce React
 ## 📋 Table des Matières
-- [Aperçu du Projet](#README.md#L12)
-- [Architecture Technique](#README.md#L33)
-- [Fonctionnalités Détaillées](#README.md#L42)
-- [Structure des Composants](#README.md#L68)
-- [Gestion d'État](#README.md#L156)
-- [Guide d'Installation](#README.md#L176)
+- [Aperçu du Projet](#aperçu-du-projet)
+- [Architecture Technique](#architecture-technique)
+- [Fonctionnalités Détaillées](#fonctionnalités-détaillées)
+- [Structure des Composants](#structure-des-composants)
+- [Gestion d'État](#gestion-détat)
+- [Guide d'Installation](#guide-dinstallation)
 
 ---
 
@@ -20,13 +20,13 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 ---
 
 ### Objectifs principaux
-- Créer une interface web **simple, fluide et responsive** pour la vente de produits.
-- Mettre en pratique les concepts clés de **React** :
-  - Gestion globale de l’état avec **Context API**
-  - Navigation entre pages avec **React Router**
-  - Implémenter un panier fonctionnel :
-  - Ajouter et supprimer des produits
-  - Calcul automatique du total
+* - Créer une interface web **simple, fluide et responsive** pour la vente de produits.
+* - Mettre en pratique les concepts clés de **React** :
+*  - Gestion globale de l’état avec **Context API**
+*  - Navigation entre pages avec **React Router**
+*  - Implémenter un panier fonctionnel :
+*  - Ajouter et supprimer des produits
+*  - Calcul automatique du total
 
 ---
 
@@ -98,7 +98,7 @@ Si le produit est déjà dans le panier, la quantité augmente de 1.
 Sinon, le produit est ajouté avec quantity = 1. 
 ---
 ---
-[<img src="image-5.png" alt="CartContext code" width="300">](image-5.png)
+[<img src="image-5.png" alt="CartContext code" width="500">](image-5.png)
 ---
 
 
@@ -126,7 +126,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 [<img src="image-2.png" alt="Cart component" width="500">](image-2.png)
 
 
-* Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
+**Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total**
 
 
 [<img src="image-11.png" alt="Cart component" width="400">](image-11.png)
@@ -140,18 +140,18 @@ Sinon, le produit est ajouté avec quantity = 1.
 * Il peut supprimer facilement n’importe quel produit.
 * L’affichage est clair et esthétique grâce aux classes Bootstrap.
 
-[<img src="image-6.png" alt="CartContext implementation" width="400">](image-6.png)
+[<img src="image-6.png" alt="CartContext implementation" width="600">](image-6.png)
 
 ---
 ### Gestion des Produits 
 
-[<img src="image-10.png"  width="400">](image-10.png)
+[<img src="image-10.png"  width="600">](image-10.png)
 * On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
 * Permet de trouver un produit précis selon son id, utile pour afficher les détails d’un produit sur la page Details/:id
 
 
-[<img src="image-7.png"  width="400">](image-7.png)
+[<img src="image-7.png"  width="600">](image-7.png)
 
 --- 
 ## Gestion d'État
