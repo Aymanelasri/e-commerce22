@@ -134,7 +134,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 
 ---
 ---
-[<img src="image.png" alt="Cart interface" width="400">](image.png)
+[<img src="image.png" alt="Cart interface" width="700">](image.png)
 * L’utilisateur voit tous les produits ajoutés au panier.
 * Il peut consulter la quantité, le prix et le sous-total de chaque produit.
 * Il peut supprimer facilement n’importe quel produit.
@@ -145,7 +145,26 @@ Sinon, le produit est ajouté avec quantity = 1.
 ---
 ### Gestion des Produits 
 
-[<img src="image-10.png"  width="600">](image-10.png)
+const {id}=useParams();
+const products = {
+    women: [
+      {id:1,title:"Elegant Midi Dress",prix:300  ,description:"A lightweight printed midi dress that offers comfort and elegance for everyday wear or special occasions.",img:"/images/women/photo1.webp" ,quantity:10},
+    
+
+  ],
+  men: [
+    {id:11,title:"Classic T-Shirt",prix:250 ,description:"A timeless classic t-shirt with a classic fit and classic colors.",img:"/images/men/photo1.webp" , quantity:30},
+      
+  ],
+  kids: [
+    {id:21,title:"Graphic T-Shirt",prix:150 ,description:"A fun graphic t-shirt with colorful prints, perfect for everyday wear.",img:"/images/kids/photo1.webp" , quantity:30},
+    
+  ],
+}
+const allProducts=[...products.women,...products.men,...products.kids]
+const pr=allProducts.find(p=>p.id===Number(id))
+---
+---
 * On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
 * Permet de trouver un produit précis selon son id, utile pour afficher les détails d’un produit sur la page Details/:id
