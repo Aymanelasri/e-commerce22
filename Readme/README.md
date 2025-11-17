@@ -71,31 +71,27 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 
   
 
----
-      const [cartItems, setCartItems] = useState([]);
-      const addToCart = (product) => {
-      setCartItems((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
-      if (existing) {
-      
+```javascript
+const [cartItems, setCartItems] = useState([]);
+const addToCart = (product) => {
+  setCartItems((prev) => {
+    const existing = prev.find((item) => item.id === product.id);
+    if (existing) {
       return prev.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: (item.quantity || 1) + 1 }
-            : item
-        );
-      } else {
-        
-        return [...prev, { ...product, quantity: 1 }];
-      }
+        item.id === product.id
+          ? { ...item, quantity: (item.quantity || 1) + 1 }
+          : item
+      );
+    } else {
+      return [...prev, { ...product, quantity: 1 }];
+    }
+  });
+};
+```
 
-      
-    });
-  };
-
-
-* cartItems   est le tableau contenant tous les produits dans le panier.
-Si le produit est déjà dans le panier, la quantité augmente de 1.
-Sinon, le produit est ajouté avec quantity = 1. 
+* **cartItems** est le tableau contenant tous les produits dans le panier
+* Si le produit est déjà dans le panier, la quantité augmente de 1
+* Sinon, le produit est ajouté avec quantity = 1 
 ---
 ---
 [<img src="image-5.png" alt="CartContext code" width="500">](image-5.png)
