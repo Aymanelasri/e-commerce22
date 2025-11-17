@@ -2,7 +2,7 @@
 ## 📋 Table des Matières
 - [Aperçu du Projet](#README.md#L12)
 - [Architecture Technique](#README.md#L33)
-- [Fonctionnalités Détaillées](#README.md#L41)
+- [Fonctionnalités Détaillées](#README.md#L42)
 - [Structure des Composants](#README.md#L68)
 - [Gestion d'État](#README.md#L156)
 - [Guide d'Installation](#README.md#L176)
@@ -69,8 +69,11 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
 
 ### CartContext 
 
-  const [cartItems, setCartItems] = useState([]);
-    const addToCart = (product) => {
+  
+
+---
+const [cartItems, setCartItems] = useState([]);
+ const addToCart = (product) => {
     setCartItems((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
@@ -90,9 +93,6 @@ Cette application permet aux utilisateurs de parcourir les produits pour hommes,
   };
 
 
-
----
-
 * cartItems   est le tableau contenant tous les produits dans le panier.
 Si le produit est déjà dans le panier, la quantité augmente de 1.
 Sinon, le produit est ajouté avec quantity = 1. 
@@ -105,7 +105,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 ## Navbar
 
 
-[<img src="image-9.png" alt="Cart component" width="400">](image-9.png)
+[<img src="image-9.png" alt="Cart component" width="800">](image-9.png)
 
 - La **barre de navigation** contient toutes les catégories :  
   - **Homme**  
@@ -123,7 +123,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 
 ---
 ### cart.jsx 
-[<img src="image-1.png" alt="Cart component" width="500">](image-1.png)
+[<img src="image-2.png" alt="Cart component" width="500">](image-2.png)
 
 
 * Cette ligne calcule le total du panier : elle parcourt tous les produits (cartItems), multiplie le prix (prix) par la quantité (quantity) pour chaque produit, puis additionne le tout pour obtenir le total.
@@ -144,7 +144,7 @@ Sinon, le produit est ajouté avec quantity = 1.
 ---
 ### Gestion des Produits 
 
-[<img src="image.png" alt="Product management" width="400">](image.png)
+[<img src="image-10.png"  width="400">](image-10.png)
 * On combine d’abord tous les produits dans un seul tableau, puis on peut facilement retrouver n’importe quel produit selon son id pour l’afficher dans la page de détails.
 
 * Permet de trouver un produit précis selon son id, utile pour afficher les détails d’un produit sur la page Details/:id
