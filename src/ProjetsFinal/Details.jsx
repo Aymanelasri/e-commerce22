@@ -40,10 +40,10 @@ export default function Details() {
     {id:23,title:"Leather Wallet",prix:250 ,description:"A compact leather wallet with multiple compartments for cards and cash.",img:"/images/kids/photo3.webp" , quantity:50},
     {id:24,title:"Casual Shirt",prix:300 ,description:"A casual shirt with a relaxed fit, perfect for weekend outings.",img:"/images/kids/photo4.webp" , quantity:25},
     {id:25,title:"Chino Pants",prix:350 ,description:"Comfortable chino pants with a modern fit, suitable for both work and casual wear.",img:"/images/kids/photo5.webp" , quantity:20},
-    {id:26,title:"Wool Coat",prix:400 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/kids/photo6.webp" , quantity:15},
+    {id:26,title:"estro",prix:400 ,description:"A warm wool coat with a classic design, perfect for the winter season.",img:"/images/kids/photo6.webp" , quantity:15},
     {id:27,title:"Aviator Sunglasses",prix:450 ,description:"Stylish aviator sunglasses with UV protection for sunny days.",img:"/images/kids/photo7.webp" , quantity:10},
     {id:28,title:"Leather Belt",prix:350 ,description:"A durable leather belt with a classic buckle, suitable for both casual and formal outfits.",img:"/images/kids/photo8.webp" , quantity:50},
-    {id:29,title:"Digital Watch",prix:100 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/kids/photo9.webp" , quantity:40},
+    {id:29,title:"tiyer",prix:100 ,description:"A sporty digital watch with multiple functions, perfect for active lifestyles.",img:"/images/kids/photo9.webp" , quantity:40},
     {id:30,title:"Cologne",prix:100 ,description:"A fresh and invigorating cologne with woody and citrus notes.",img:"/images/kids/photo10.webp" , quantity:30},
   ],
 }
@@ -88,23 +88,35 @@ const allProducts=[...products.women,...products.men,...products.kids]
           <p className="mt-3 mb-1 fw-bold">{pr.description}</p>
 
           
-          <div className="mb-3">
-            <label className="form-label fw-bold">Taille:</label>
-            <div className="d-flex gap-2">
-              {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
-                <button
-                  key={size}
-                  className={`btn ${selectedSize === size ? 'btn-primary' : 'btn-outline-primary'}`}
-                  onClick={() => setSelectedSize(size)}>
-                  {size}
-                </button>
-              ))}
-            </div>
-          </div>
+       
+          
+                {pr.id >= 21 && pr.id <= 30 ? 
+                  // Tailles pour enfants
+                  ['4-5 ans', '6-7 ans', '8-9 ans', '10-11 ans', '12-13 ans'].map(size => (
+                    <button
+                      key={size}
+                      className={`btn ${selectedSize === size ? 'btn-primary' : 'btn-outline-primary'}`}
+                      onClick={() => setSelectedSize(size)}>
+                      {size}
+                    </button>
+                  )) :
+                  // Tailles pour adultes
+                  ['S', 'M', 'L', 'XL', 'XXL'].map(size => (
+                    <button
+                      key={size}
+                      className={`btn ${selectedSize === size ? 'btn-primary' : 'btn-outline-primary'}`}
+                      onClick={() => setSelectedSize(size)}>
+                      {size}
+                    </button>
+                  ))
+                }
+           
+          
 
           
           <button className="btn btn-primary" onClick={() => addToCart(pr)}>
-            Ajouter au panier ({selectedSize})
+          
+            Ajouter au panier
           </button>
           
         </div>

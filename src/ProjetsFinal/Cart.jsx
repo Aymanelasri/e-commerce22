@@ -7,7 +7,7 @@ import "@fontsource/poppins";
 
 
 export default function Cart() {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
   const [showPayment, setShowPayment] = useState(false);
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
@@ -48,10 +48,8 @@ export default function Cart() {
     setTimeout(() => {
       setPaymentSuccess(false);
       setShowPayment(false);
-      setCardNumber('');
-      setExpiryDate('');
-      setCvv('');
-      setCardName('');
+      
+      clearCart(); // Vider le panier
     }, 3000);
   };
 
@@ -79,7 +77,7 @@ export default function Cart() {
           ) : (
 
             <>
-              {/* items list */}
+       
               <div className="cart-items mb-4">
                 {cartItems.map((item, index) => {
                   const id = item.id || index;
@@ -89,7 +87,7 @@ export default function Cart() {
                   return (
                     <div key={id} className="d-flex align-items-center justify-content-between mb-3 p-2 border rounded">
                       <div className="d-flex align-items-center">
-                        {item.img && <img src={item.img} alt={item.title || ''} style={{ width: 80, height: 80, objectFit: 'cover' }} className="me-3" />}
+                        {item.img && <img src={item.img} alt={item.title } style={{ width: 80, height: 80, objectFit: 'cover' }} className="me-3" />}
                         <div>
                           <h6 className="mb-1">{item.title  }</h6>
                           <div className="text-muted">{qty} x {price.toFixed(2)} DH</div>
